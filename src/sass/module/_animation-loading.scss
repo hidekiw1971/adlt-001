@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 555;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // animation設定
+    animation-name: loader;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+}
+
+.loader .txt {
+    font-size: rem(45);
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.5);
+}
+
+@keyframes loader {
+    0% {
+        background: rgba(255, 192, 203, 1);
+        // 
+    }
+
+    50% {
+        background: rgba(255, 105, 180, 1);
+        // 
+    }
+
+    100% {
+        background: rgba(0, 0, 0, 1);
+        // 
+    }
+}
+
+// 文字を上下させるアニメション設定
+.txt {
+    animation: txt 0.5s infinite;
+    // 
+}
+
+@keyframes txt {
+    0% {
+        transform: translateY(0) scale(0);
+        // 
+    }
+
+    50% {
+        transform: translateY(0) scale(2);
+        // 
+    }
+
+    100% {
+        transform: translateY(0) scale(0);
+        // 
+    }
+}

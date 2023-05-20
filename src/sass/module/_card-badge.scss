@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.card-badge {
+    position: relative;
+    display: block;
+}
+
+.card-badge::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-width: rem(70) rem(70) 0 0;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.7) transparent transparent transparent;
+}
+
+.card-badge-text {
+    position: absolute;
+    top: rem(0);
+    left: rem(0);
+    font-family: $third-font-family;
+    font-size: rem(20);
+    z-index: 2;
+    // 
+}

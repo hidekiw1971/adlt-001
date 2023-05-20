@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.main {
+    background: rgba(255, 255, 255, 1);
+    padding: rem(10);
+
+    @include mq(md) {
+        max-width: rem(1100);
+        width: 100%;
+        margin: 0 auto;
+    }
+}

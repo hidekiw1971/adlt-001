@@ -1,0 +1,38 @@
+@use "global" as *;
+
+/* ローディング時にスクロールさせない */
+.fixed {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.loading-bg {
+    background: rgba(255, 255, 255, 1);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 9000;
+}
+
+.loading-animation {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.loading-animation img {
+    display: none;
+    /* ロゴは最初非表示 */
+    height: auto;
+    max-width: 400px;
+    /* 必要に応じて画像の最大幅 */
+    min-width: 100px;
+    /* 必要に応じて画像の最小幅 */
+    width: 25vw;
+}

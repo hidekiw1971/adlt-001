@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.categories {
+    margin-bottom: rem(30);
+}
+
+.categories-ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categories-li {
+    background: rgba(65, 105, 225, 1);
+    padding: rem(2) rem(5);
+    border-radius: rem(15);
+    margin: rem(1) 0;
+}
+
+.categories-li:not(:last-child) {
+    margin-right: rem(5);
+}

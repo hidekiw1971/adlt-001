@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.swiper.swiper-mv {
+    // 
+}
+
+.swiper-mv-image {
+    padding-top: 70%;
+    position: relative;
+    overflow: hidden;
+    // 
+}
+
+.swiper-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    // アニメーションの設定
+    // animation: animation-mv 80s linear 0s 1 normal both; // 一括指定のスタイル
+    animation-name: animation-mv; // アニメーション名
+    animation-duration: 80s; // アニメーション1回分の時間
+    animation-timing-function: linear; // アニメーションの進行スタイル
+    animation-delay: 0s; // アニメーションが開始するまでの時間
+    animation-direction: normal; // アニメーションの再生方向
+    animation-fill-mode: both; // アニメーション実行前後の状態
+
+    @keyframes animation-mv {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            // 
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(1.15);
+            // 
+        }
+    }
+
+    // 
+}

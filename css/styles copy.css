@@ -1,0 +1,440 @@
+@charset "UTF-8";
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+/* リキッドレイアウト対応 */
+html {
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 4.2666666667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.4545454545vw;
+  }
+}
+@media (min-width: 1100px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* pcの電話番号発信対応 */
+@media screen and (min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+/* ホバー */
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+@media screen and (min-width: 768px) {
+  a:hover {
+    opacity: 0.8;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+section.afi-contents {
+  background: red;
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+body {
+  background: rgb(51, 51, 51);
+}
+
+.card-badge {
+  position: relative;
+  display: block;
+}
+
+.card-badge::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-width: 70px 70px 0 0;
+  border-width: 4.375rem 4.375rem 0 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, .7) transparent transparent transparent;
+}
+
+.card-badge-text {
+  position: absolute;
+  top: 0px;
+  top: 0rem;
+  left: 0px;
+  left: 0rem;
+  font-family: "Rampart One", cursive;
+  font-size: 20px;
+  font-size: 1.25rem;
+  z-index: 2;
+}
+
+.card-ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.card-li {
+  background: rgba(255, 105, 180, .2);
+}
+
+.card-figure {
+  padding-top: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.categories {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+
+.categories-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.categories-li {
+  background: rgb(65, 105, 225);
+  padding: 2px 5px;
+  padding: 0.125rem 0.3125rem;
+  border-radius: 0.9375rem;
+  margin: 1px 0;
+  margin: 0.0625rem 0;
+}
+
+.categories-li:not(:last-child) {
+  margin-right: 5px;
+  margin-right: 0.3125rem;
+}
+
+.footer {
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  padding: 0.625rem;
+  border-top: solid 1px rgba(51, 51, 51, .2);
+  border-top: solid 0.0625rem rgba(51, 51, 51, .2);
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    max-width: 68.75rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.footer > small {
+  display: inherit;
+  text-align: center;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  padding: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: solid 1px rgba(51, 51, 51, .2);
+  border-bottom: solid 0.0625rem rgba(51, 51, 51, .2);
+}
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 68.75rem;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.header > h1 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+a.js-drawer {
+  background: rgb(192, 192, 192);
+  max-width: 50px;
+  max-width: 3.125rem;
+  width: 100%;
+  height: 50px;
+  height: 3.125rem;
+  position: relative;
+}
+
+a.js-drawer > span {
+  display: block;
+  width: 80%;
+  height: 5px;
+  height: 0.3125rem;
+  background: rgb(51, 51, 51);
+  border-radius: 0.625rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+a.js-drawer > span::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 70%;
+  height: 5px;
+  height: 0.3125rem;
+  background: rgb(51, 51, 51);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -250%);
+          transform: translate(-50%, -250%);
+  border-radius: 0.625rem;
+}
+
+a.js-drawer > span::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 70%;
+  height: 5px;
+  height: 0.3125rem;
+  background: rgb(51, 51, 51);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 150%);
+          transform: translate(-50%, 150%);
+  border-radius: 0.625rem;
+}
+
+a.js-drawer-active > span {
+  background: rgba(51, 51, 51, 0);
+}
+
+a.js-drawer-active > span::before {
+  top: 20%;
+  left: 20%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+a.js-drawer-active > span::after {
+  top: 20%;
+  left: 20%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+div.js-drawer-menu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 1100px;
+  max-width: 68.75rem;
+  width: 0%;
+  height: 100dvh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(51, 51, 51, .5)), color-stop(0%, rgba(51, 51, 51, .5)), color-stop(0%, rgb(255, 0, 0)), to(rgb(255, 0, 0)));
+  background: linear-gradient(90deg, rgba(51, 51, 51, .5) 30%, rgba(51, 51, 51, .5) 0%, rgb(255, 0, 0) 0%, rgb(255, 0, 0) 100%);
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+div.js-drawer-menu-active {
+  width: 100%;
+}
+
+.main {
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  padding: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 68.75rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.mv {
+  padding-top: 65%;
+  background: rgb(240, 230, 140);
+}
+
+.new {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+
+.ranking {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+
+.sitemap {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+/*# sourceMappingURL=styles.css.map */

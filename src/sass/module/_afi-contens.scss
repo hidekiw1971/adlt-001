@@ -1,0 +1,10 @@
+@use "global" as *;
+
+section.afi-contents {
+    background: red;
+    margin-bottom: rem(30);
+
+    @include mq(md) {
+        // 
+    }
+}

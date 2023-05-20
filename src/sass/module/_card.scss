@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.card-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card-li {
+    background: rgba(255, 105, 180, 0.2);
+}
+
+.card-figure {
+    padding-top: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
+}

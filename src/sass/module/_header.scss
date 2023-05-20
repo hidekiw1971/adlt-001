@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.header {
+    position: fixed;
+    top: rem(0);
+    left: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 1);
+    padding: rem(10);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid rem(1) rgba(51, 51, 51, .2);
+    width: 100%;
+
+    @include mq(md) {
+        max-width: rem(1100);
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.header>h1 {
+    font-family: $base-font-family;
+
+    @include mq(md) {
+        // 
+    }
+}
