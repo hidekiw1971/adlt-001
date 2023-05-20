@@ -37,14 +37,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       shadow: false,
     },
     autoplay: {
-      delay: 3000,
-      disableOnInteraction: false, // ユーザーの操作でautoplayを停止しない
+      delay: 3000, // スライドが3秒ごとに切り替わる。
+      disableOnInteraction: false, // ユーザーの操作でautoplayを停止しない。
     },
-    speed: 1000,
+    speed: 1000, // 1枚の画像アニメーションを1秒掛けて表現する。
     simulateTouch: false,
     // 他のオプション設定
   });
   // /swiper-mvの設定
+
+  // ボタンをクリックしたらスクロールして上に戻る
+  $('.top-button').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 300, 'swing');
+    return false;
+  });
+  // ボタンをクリックしたらスクロールして上に戻る
+
 
   // 
 });
