@@ -3,6 +3,7 @@
 .main {
     background: rgba(255, 255, 255, 1);
     padding: rem(10);
+    padding-top: rem(110);
 
     @include mq(md) {
         max-width: rem(1100);

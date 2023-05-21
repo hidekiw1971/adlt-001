@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: rgba(255, 255, 0, 1);
+    // 
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+    width: rem(30);
+    height: rem(30);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 1);
+    // 
+}
+
+div.swiper-button-prev::after {
+    content: "◀︎";
+    font-size: rem(10);
+}
+
+div.swiper-button-next::after {
+    content: "▶︎";
+    font-size: rem(10);
+}

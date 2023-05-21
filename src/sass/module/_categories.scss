@@ -19,3 +19,7 @@
 .categories-li:not(:last-child) {
     margin-right: rem(5);
 }
+
+.categories-li>a {
+    color: rgba(255, 255, 255, 1);
+}

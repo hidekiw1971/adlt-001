@@ -96,7 +96,6 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
@@ -205,44 +204,6 @@ section.afi-contents {
   /* フェード開始を0.5秒遅らせる */
 }
 
-/* ローディング時にスクロールさせない */
-.fixed {
-  height: 100%;
-  position: fixed;
-  width: 100%;
-}
-
-.loading-bg {
-  background: rgb(255, 255, 255);
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 9000;
-}
-
-.loading-animation {
-  left: 50%;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-.loading-animation img {
-  display: none;
-  /* ロゴは最初非表示 */
-  height: auto;
-  max-width: 400px;
-  /* 必要に応じて画像の最大幅 */
-  min-width: 100px;
-  /* 必要に応じて画像の最小幅 */
-  width: 25vw;
-}
-
 .loader {
   position: fixed;
   width: 100%;
@@ -334,6 +295,23 @@ section.afi-contents {
             transform: translateY(0) scale(0);
   }
 }
+.article-title {
+  -webkit-box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, .3);
+          box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, .3);
+}
+
+.article-title,
+.article-summary,
+.article-subjectivity,
+.article-ul {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+
+.article-list > i {
+  color: rgb(255, 0, 0);
+}
+
 body {
   background: rgb(51, 51, 51);
 }
@@ -416,6 +394,10 @@ body {
 .categories-li:not(:last-child) {
   margin-right: 5px;
   margin-right: 0.3125rem;
+}
+
+.categories-li > a {
+  color: rgb(255, 255, 255);
 }
 
 .footer {
@@ -555,13 +537,13 @@ div.js-drawer-menu {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(51, 51, 51, .5)), color-stop(0%, rgba(51, 51, 51, .5)), color-stop(0%, rgb(255, 0, 0)), to(rgb(255, 0, 0)));
   background: linear-gradient(90deg, rgba(51, 51, 51, .5) 50%, rgba(51, 51, 51, .5) 0%, rgb(255, 0, 0) 0%, rgb(255, 0, 0) 100%);
   z-index: 10;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 div.js-drawer-menu-active {
   display: block;
   width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 ul.js-drawer-menu-group {
@@ -588,6 +570,8 @@ li.js-drawer-menu-list {
   background: rgb(255, 255, 255);
   padding: 10px;
   padding: 0.625rem;
+  padding-top: 110px;
+  padding-top: 6.875rem;
 }
 @media screen and (min-width: 768px) {
   .main {
@@ -598,9 +582,9 @@ li.js-drawer-menu-list {
 }
 
 .mv {
-  margin-top: 60px;
-  margin-top: 3.75rem;
   background: rgb(240, 230, 140);
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 
 .new {
@@ -616,6 +600,25 @@ li.js-drawer-menu-list {
 .sitemap {
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
+}
+
+.swiper-gallery {
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+}
+
+.swiper-gallery-image {
+  padding-top: 65%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-gallery-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .swiper-mv-image {
@@ -662,6 +665,32 @@ li.js-drawer-menu-list {
     -webkit-transform: translate(-50%, -50%) scale(1.15);
             transform: translate(-50%, -50%) scale(1.15);
   }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: rgb(255, 255, 0);
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  width: 30px;
+  width: 1.875rem;
+  height: 30px;
+  height: 1.875rem;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+}
+
+div.swiper-button-prev::after {
+  content: "◀︎";
+  font-size: 10px;
+  font-size: 0.625rem;
+}
+
+div.swiper-button-next::after {
+  content: "▶︎";
+  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .top-button {

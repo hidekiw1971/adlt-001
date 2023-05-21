@@ -46,6 +46,31 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
   // /swiper-mvの設定
 
+  // swiper-galleryの設定
+  const swiperGalleryPhoto = new Swiper('.swiper.swiper-gallery-photo', {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    loop: true,
+    effect: 'cube',
+    cubeEffect: {
+      shadow: false,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+    simulateTouch: false,
+  });
+  // /swiper-galleryの設定
+
   // ボタンをクリックしたらスクロールして上に戻る
   $('.top-button').click(function () {
     $('body,html').animate({

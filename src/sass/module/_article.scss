@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.article-title {
+    box-shadow: rem(2) rem(2) rem(4) rgba(0, 0, 0, 0.3);
+    //  
+}
+
+.article-title,
+.article-summary,
+.article-subjectivity,
+.article-ul {
+    margin-bottom: rem(30);
+    // 
+}
+
+.article-list>i {
+    color: rgba(255, 0, 0, 1);
+}

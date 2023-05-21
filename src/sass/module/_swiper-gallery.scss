@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.swiper-gallery {
+    margin-bottom: rem(80);
+    // 
+}
+
+.swiper-gallery-photo {
+    // 
+}
+
+.swiper-gallery-image {
+    padding-top: 65%;
+    position: relative;
+    overflow: hidden;
+    // 
+}
+
+.swiper-gallery-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // 
+}
