@@ -173,6 +173,55 @@ select::-ms-expand {
   display: none;
 }
 
+.qa {
+  font-size: 20px;
+}
+
+.q {
+  background-color: mediumseagreen;
+  height: 100%;
+  padding: 15px 40px 15px 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.q:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.q:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%) rotate(90deg);
+          transform: translate(0, -50%) rotate(90deg);
+}
+
+.q.active:after {
+  display: none;
+}
+
+.a {
+  background-color: greenyellow;
+  height: 100%;
+  display: none;
+  padding: 15px;
+}
+
 section.afi-contents {
   background: red;
   margin-bottom: 30px;
@@ -302,8 +351,7 @@ section.afi-contents {
 
 .article-title,
 .article-summary,
-.article-subjectivity,
-.article-ul {
+.article-subjectivity {
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
 }
@@ -679,6 +727,14 @@ div.swiper-button-prev {
   height: 1.875rem;
   border-radius: 50%;
   background: rgb(255, 255, 255);
+  opacity: 0.3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+div.swiper-button-next:hover,
+div.swiper-button-prev:hover {
+  opacity: 1;
 }
 
 div.swiper-button-prev::after {

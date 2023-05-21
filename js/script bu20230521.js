@@ -80,15 +80,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
   // ボタンをクリックしたらスクロールして上に戻る
 
-  // アコーディオンの設定
-  $('.q').click(function () {
-    $(this).siblings('.a').stop().slideToggle();
-    $('.q').not($(this)).siblings('.a').slideUp();
-    $(this).toggleClass('active');
-    $('.q').not($(this)).removeClass('active');
-  });
-  // /アコーディオンの設定
-
 
   // 
 });

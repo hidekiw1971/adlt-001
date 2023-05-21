@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.qa {
+    font-size: 20px;
+}
+
+.q {
+    background-color: mediumseagreen;
+    height: 100%;
+    padding: 15px 40px 15px 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.q:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.q:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%) rotate(90deg);
+}
+
+.q.active:after {
+    display: none;
+}
+
+.a {
+    background-color: greenyellow;
+    height: 100%;
+    display: none;
+    padding: 15px;
+}
